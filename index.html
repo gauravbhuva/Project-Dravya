@@ -89,7 +89,7 @@
                     WELCOME TO DRAVYA HOMOEOCARE
                 </h1>
                 <p class="text-lg text-gray-600 mb-8">
-                    Believe in holistic healing with personalized homeopathic treatments tailored to your menatl and physical wellbeing.
+                    Believe in holistic healing with personalized homeopathic treatments tailored to your mental and physical wellbeing.
                 </p>
                 <div class="flex space-x-4">
                     <a href="#contact" class="bg-secondary hover:bg-secondary-dark text-white px-6 py-3 rounded-lg font-medium transition duration-300 inline-block">
@@ -163,7 +163,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg overflow-hidden shadow-md treatment-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/acute.png" alt="Acute Conditions" class="w-full h-90 object-cover">
+                    <img src="images/acute.png" alt="Acute Conditions" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -174,11 +174,11 @@
                         <p class="text-gray-600 mb-4">
                             Acute illnesses include common cold, coryza, cough, fever, tonsilitis, gastritis, food poisioning, diarrhea, vomiting.
                         </p>
-                        </div>
+                    </div>
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md treatment-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/chronic.jpeg" alt="chronnic" class="w-full h-90 object-cover">
+                    <img src="images/chronic.jpeg" alt="chronnic" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -189,11 +189,11 @@
                         <p class="text-gray-600 mb-4">
                             Effective treatment for allergic rhinitis, renal stone, arthritis, migrain and other chronic illnesses.
                         </p>
-                        </div>
+                    </div>
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md treatment-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/mental.jpeg" alt="Mental Health" class="w-full h-90 object-cover">
+                    <img src="images/mental.jpeg" alt="Mental Health" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -204,11 +204,11 @@
                         <p class="text-gray-600 mb-4">
                             Support for anxiety, depression, stress, and other emotional and psychological conditions.
                         </p>
-                        </div>
+                    </div>
                 </div>
 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md treatment-card transition duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <img src="images/women.jpeg" alt="Women's Health" class="w-full h-90 object-cover">
+                    <img src="images/women.jpeg" alt="Women's Health" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -219,11 +219,11 @@
                         <p class="text-gray-600 mb-4">
                             Holistic support for hormonal imbalances, menstrual issues and menopausal issues, fertility, tailored for every stage of life.
                         </p>
-                        </div>
+                    </div>
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md treatment-card transition duration-300" data-aos="fade-up" data-aos-delay="500">
-                    <img src="images/skin.jpeg" alt="Skin Conditions" class="w-full h-90 object-cover">
+                    <img src="images/skin.jpeg" alt="Skin Conditions" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -232,13 +232,13 @@
                             <h3 class="text-xl font-semibold">Skin Conditions</h3>
                         </div>
                         <p class="text-gray-600 mb-4">
-                           Constitutional approach for recurrent skin dieases like corns, warts, urticaria, psoriasis, eczema, ringworm etc.
+                            Constitutional approach for recurrent skin dieases like corns, warts, urticaria, psoriasis, eczema, ringworm etc.
                         </p>
-                        </div>
+                    </div>
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md treatment-card transition duration-300" data-aos="fade-up" data-aos-delay="600">
-                    <img src="images/lifestyle.jpeg" alt="Digestive Health" class="w-full h-90 object-cover">
+                    <img src="images/lifestyle.jpeg" alt="Digestive Health" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -249,7 +249,7 @@
                         <p class="text-gray-600 mb-4">
                             Gentle treatment for general wellbeing, support and advice on dietary and lifestyle modification.
                         </p>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -344,46 +344,37 @@
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
                     <div class="bg-white p-8 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-6">Book a Consultation</h3>
-                        <form name="consultation" method="POST" data-netlify="true" action="/"class="space-y-6">
-  <input type="hidden" name="form-name" value="consultation">
+                        <form name="consultation" method="POST" data-netlify="true" action="/" class="space-y-6">
+                            <input type="hidden" name="form-name" value="consultation">
+                            <div>
+                                <label class="block text-gray-700">Full Name</label>
+                                <input type="text" name="name" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
 
-  <!-- Name -->
-  <div>
-    <label class="block text-gray-700">Full Name</label>
-    <input type="text" name="name" required class="w-full border rounded-lg p-3 mt-2">
-  </div>
+                            <div>
+                                <label class="block text-gray-700">Email Address</label>
+                                <input type="email" name="email" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
 
-  <!-- Email -->
-  <div>
-    <label class="block text-gray-700">Email Address</label>
-    <input type="email" name="email" required class="w-full border rounded-lg p-3 mt-2">
-  </div>
+                            <div>
+                                <label class="block text-gray-700">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
 
-  <!-- Phone -->
-  <div>
-    <label class="block text-gray-700">Phone Number</label>
-    <input type="tel" name="phone" required class="w-full border rounded-lg p-3 mt-2">
-  </div>
+                            <div>
+                                <label class="block text-gray-700">Preferred Date</label>
+                                <input type="date" name="date" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
 
-  <!-- Date -->
-  <div>
-    <label class="block text-gray-700">Preferred Date</label>
-    <input type="date" name="date" required class="w-full border rounded-lg p-3 mt-2">
-  </div>
+                            <div>
+                                <label class="block text-gray-700">Health Concern</label>
+                                <textarea name="message" rows="4" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            </div>
 
-  <!-- Health Concern -->
-  <div>
-    <label class="block text-gray-700">Health Concern</label>
-    <textarea name="message" rows="4" required class="w-full border rounded-lg p-3 mt-2"></textarea>
-  </div>
-
-  <!-- Submit -->
-  <button type="submit" class="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:bg-teal-700 transition">
-    Book Consultation
-  </button>
-</form>
-
-
+                            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-white px-6 py-3 rounded-lg font-medium w-full transition duration-300">
+                                Book Consultation
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
@@ -406,7 +397,7 @@
                                 <div>
                                     <h4 class="font-medium text-gray-800">Phone</h4>
                                     <p class="text-gray-600">+91 70410 53966</p>
-                                   </div>
+                                    </div>
                             </div>
                             <div class="flex items-start">
                                 <div class="bg-primary-light p-3 rounded-full mr-4">
@@ -467,11 +458,12 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Acute Conditions</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Chronic Conditions</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Pediatric Care</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Mental Health</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Women's Health</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Skin Conditions</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Lifestyle Disorders</a></li>
                     </ul>
                 </div>
                 </div>
