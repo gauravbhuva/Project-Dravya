@@ -344,37 +344,79 @@
                 <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
                     <div class="bg-white p-8 rounded-lg shadow-md">
                         <h3 class="text-xl font-semibold mb-6">Book a Consultation</h3>
-                        <form name="consultation" method="POST" data-netlify="true" action="/" class="space-y-6">
-                            <input type="hidden" name="form-name" value="consultation">
-                            <div>
-                                <label class="block text-gray-700">Full Name</label>
-                                <input type="text" name="name" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
+                        <form id="consultation-form" class="space-y-6">
+    <div>
+        <label class="block text-gray-700">Full Name</label>
+        <input type="text" name="name" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+    </div>
 
-                            <div>
-                                <label class="block text-gray-700">Email Address</label>
-                                <input type="email" name="email" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
+    <div>
+        <label class="block text-gray-700">Email Address</label>
+        <input type="email" name="email" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+    </div>
 
-                            <div>
-                                <label class="block text-gray-700">Phone Number</label>
-                                <input type="tel" name="phone" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
+    <div>
+        <label class="block text-gray-700">Phone Number</label>
+        <input type="tel" name="phone" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+    </div>
 
-                            <div>
-                                <label class="block text-gray-700">Preferred Date</label>
-                                <input type="date" name="date" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
+    <div>
+        <label class="block text-gray-700">Preferred Date</label>
+        <input type="date" name="date" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+    </div>
 
-                            <div>
-                                <label class="block text-gray-700">Health Concern</label>
-                                <textarea name="message" rows="4" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-                            </div>
+    <div>
+        <label class="block text-gray-700">Health Concern</label>
+        <textarea name="message" rows="4" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+    </div>
 
-                            <button type="submit" class="bg-secondary hover:bg-secondary-dark text-white px-6 py-3 rounded-lg font-medium w-full transition duration-300">
-                                Book Consultation
-                            </button>
-                        </form>
+    <button type="submit" class="bg-secondary hover:bg-secondary-dark text-white px-6 py-3 rounded-lg font-medium w-full transition duration-300">
+        Book Consultation
+    </button>
+</form>
+
+<script>
+document.getElementById('consultation-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = "Submitting...";
+
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    date: form.date.value,
+    message: form.message.value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbwWciXn0kLe5RMMRlbAedWpQsHdsY6hKqfMQ9l1xSGxKT-RpJxgvtqj0eJUgxbmt7i9Kg/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("✅ Your consultation has been booked successfully!");
+    form.reset();
+  })
+  .catch(err => {
+    alert("❌ There was an error. Please try again.");
+    console.error(err);
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  });
+});
+</script>
+
+
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
