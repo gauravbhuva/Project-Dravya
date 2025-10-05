@@ -357,7 +357,11 @@
 
     <div>
         <label class="block text-gray-700">Phone Number</label>
-        <input type="tel" name="phone" required class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+        <input type="tel" name="phone" required
+       pattern="[0-9]{10}" 
+       title="Please enter a 10-digit phone number"
+       class="w-full border rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+
     </div>
 
     <div>
@@ -392,8 +396,8 @@ document.getElementById('consultation-form').addEventListener('submit', function
     date: form.date.value,
     message: form.message.value
   };
-
-  fetch("https://script.google.com/macros/s/AKfycbwWciXn0kLe5RMMRlbAedWpQsHdsY6hKqfMQ9l1xSGxKT-RpJxgvtqj0eJUgxbmt7i9Kg/exec", {
+const scriptURL = "https://script.google.com/macros/s/AKfycbxJMMC623tigq9CwmJEq99jo0GnQTe5-mx57iNAsnt0o3UJEgaUnuceD-olqR0w05_R/exec"
+  fetch(scriptURL, {
     method: "POST",
     mode: "no-cors",
     headers: {
